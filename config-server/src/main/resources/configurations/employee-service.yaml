@@ -1,0 +1,32 @@
+eureka:
+  instance:
+    host: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8082
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Mycompany?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Jeshma2022
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+  zipkin:
+    baseUrl: http://localhost:9411
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+
